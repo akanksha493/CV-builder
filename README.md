@@ -1,8 +1,17 @@
-# React + Vite
+# CV Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was a assignment from [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-cv-application). The aim was to build a mutipage Restaurant websites using javascript, and webpack for bundling.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What is it?
+This app builds Resume using the information you provide through forms. 
+It collects :
+- General Info : that include name and contact infos
+- Education Info: that includes graduation or schooling details
+- Work/Experience Info: that includes any internship or job experiences
+
+[Live Preview](https://zingy-marshmallow-b54010.netlify.app/)
+
+![](./src/assets/screenshot.png)
+
+
