@@ -1,0 +1,42 @@
+body{
+    height: 100vh ;
+}
+#root{
+    height: inherit;
+}
+main{
+    padding: 1rem;
+}
+@media(width>=900px){
+    main{
+        box-sizing: border-box;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        gap: 1rem;
+    }
+    .form-container{
+        /* width: 40vw; */
+    }
+    .preview-outer-container{
+        /* position: fixed;
+        right: 1rem;
+        top: 1rem; */
+    }
+}
+@media(width<900px){
+    /* main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    } */
+    
+}
+/* @media(width>=1200px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        gap: 1rem;
+    }
+} */
