@@ -1,13 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+
 body{
     height: 100vh ;
+    padding: 1rem;
 }
 #root{
     height: inherit;
+    --ff-protest-revolution: "Protest Revolution";
 }
 main{
-    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
 }
-@media(width>=900px){
+.form-container h1{
+    font-family: var(--ff-protest-revolution);
+    font-size: clamp(3rem, 5vw, 4rem);
+}
+.header{
+    position: sticky;
+    top: 0;
+    padding: 1rem 0rem;
+    box-shadow: 0 5px 15px -5px #00000030;
+    background-color: white;
+}
+.sections{
+    margin-top: 2cqmax;
+}
+@media(width>=960px){
     main{
         box-sizing: border-box;
         width: 100%;
@@ -15,28 +34,9 @@ main{
         grid-template-columns: 1fr max-content;
         gap: 1rem;
     }
-    .form-container{
-        /* width: 40vw; */
-    }
-    .preview-outer-container{
-        /* position: fixed;
-        right: 1rem;
-        top: 1rem; */
+}
+@media(width<960px){
+    .header{
+        text-align: center;
     }
 }
-@media(width<900px){
-    /* main{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    } */
-    
-}
-/* @media(width>=1200px){
-    main{
-        display: grid;
-        grid-template-columns: 1fr max-content;
-        gap: 1rem;
-    }
-} */

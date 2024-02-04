@@ -3,7 +3,8 @@ const cv = {
         fname:"Raghu",
         lname:"Srivastava",
         email:"raghuSrivastava@gmail.com",
-        phno:"9999XXXXXX"
+        phno:"9999XXXXXX",
+        linkedIn: "somelink"
     },
     education:[
         {

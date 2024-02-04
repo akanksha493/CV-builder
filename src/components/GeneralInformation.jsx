@@ -9,8 +9,8 @@ function GeneralInformation(props){
     return (
         <>
             <h2>General Information</h2>
-            <form action="" >
-                <div className="input-container">
+            <div className="form">
+            <div className="input-container">
                     <label htmlFor="fname" className="required">First Name</label>
                     <input
                         type="text" 
@@ -61,11 +61,18 @@ function GeneralInformation(props){
                         value={props.initial.phno}
                     />
                 </div>
-
-                {/* add social media input  */}
-                
-                {/* {(Object.values(info))&&(info!==null)} */}
-            </form>
+                <div className="input-container">
+                    <label htmlFor="linkedin" >LinkedIn Profile</label>
+                    <input 
+                        type="text" 
+                        id="linkedin" 
+                        name="linkedIn"
+                        className="linkedin"
+                        onChange={handleChange}
+                        value={props.initial.linkedIn}
+                    />
+                </div>
+            </div>
         </>
     );
 }

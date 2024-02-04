@@ -13,18 +13,26 @@ function RenderGeneral(props){
     let fullName = props.general.fname;
     fullName = capitalise(fullName);
     if(props.general.lname.length>0) fullName+=" "+capitalise(props.general.lname);
-    const aboutInfo = [];
-    if(props.general.email!=="")aboutInfo.push(props.general.email);
-    if(props.general.phno!=="")aboutInfo.push(props.general.phno);
 
     return (
         <div className="general-container">
             <div className="name-heading">{fullName}</div>
             <div className="about-container">
-                {aboutInfo.length>0 && aboutInfo.map((subHeading, index) => {
-                    const content = (index<aboutInfo.length-1)?subHeading+" | ":subHeading;
-                    return <span className="sub-about" key={index}>{content}</span>
-                })}
+                {(props.general.email!=="")?
+                    <span>{props.general.email}</span>
+                :null}
+                {(props.general.phno!=="")?
+                    <>
+                        <span> | </span>
+                        <span>{props.general.phno}</span>
+                    </>
+                :null}
+                {(props.general.linkedIn!=="")?
+                    <>
+                        <span> | </span>
+                        <span><a target="_blank" href={props.general.linkedIn} rel="noreferrer">LinkedIn</a></span>
+                    </>
+                :null}
             </div>
         </div>
     )

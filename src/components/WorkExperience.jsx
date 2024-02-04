@@ -79,7 +79,6 @@ function Work(props){
                             type="checkbox" 
                             name="present" 
                             id="currently-working" 
-                            required
                             onChange={() => setEditedObj({
                                 ...editedObj,
                                 currentlyWorking: !editedObj.currentlyWorking
@@ -140,13 +139,22 @@ function Work(props){
                     value={editedObj.jobDescription}
                 >
                 </textarea>
-                <button type="submit">Commit Change</button>
+                <button className="commit-change bttn" type="submit">Commit Change</button>
             </form>
             :
             <>
-                <div>{props.data.name}</div>
-                <div>{props.data.position}</div>
-                <button onClick={handleEdit}>Edit</button>
+            <div className="preview-details">
+                <div className="details">
+                    <div>{props.data.name}</div>
+                    <div>{props.data.position}</div>
+                </div>
+                <div className="preview-details-bttns">
+                    <button className="edit" onClick={handleEdit}><i className="fa-solid fa-pen"></i></button>
+                    <button className="remove" onClick={() => props.handleRemoveWork(props.index)}><i className="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+                
+                
             </>
         }
         </>
@@ -192,12 +200,11 @@ function WorkExperience(props){
 
     return (
         <>
-            <h2>Work Experience</h2>
+            <h2>Work Experience(s)</h2>
             {props.initial.map((data, index) => {
                 return(
                     <>
-                        <Work data={data} key={index} index={index} handleUpdateWork={handleUpdateWork}/>
-                        <button onClick={() => handleRemoveWork(index)}>Remove</button>
+                        <Work data={data} key={index} index={index} handleUpdateWork={handleUpdateWork} handleRemoveWork={handleRemoveWork}/>
                     </>
                 )
             })}
@@ -317,7 +324,7 @@ function WorkExperience(props){
                     value={currentObj.jobDescription}
                 >
                 </textarea>
-                <button type="submit">Add To Resume</button>
+                <button className="add-to-resume bttn" type="submit">Add To Resume</button>
             </form>
         </>
     );

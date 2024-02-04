@@ -106,15 +106,21 @@ function Education(props){
                     </div>
                 </div>
                 
-
-                
-                <button type="submit">Commit Change</button>
+                <button className="commit-change bttn" type="submit">Commit Change</button>
             </form>
             :
             <>
-                <div>{props.data.name}</div>
-                <div>{props.data.course}</div>
-                <button onClick={handleEdit}>Edit</button>
+                <div className="preview-details">
+                    <div className="details">
+                        <div>{props.data.name}</div>
+                        <div>{props.data.course}</div>
+                    </div>
+                    <div className="preview-details-bttns">
+                        <button onClick={handleEdit} className="edit"><i className="fa-solid fa-pen"></i></button>
+                        <button className="remove" onClick={() => props.handleRemoveEducation(props.index)}><i className="fa-solid fa-trash"></i></button>
+                    </div>
+                    
+                </div>
             </>
             }
         </>
@@ -159,8 +165,7 @@ function EducationalExperience(props){
             {props.initial.map((data,index) => {
                 return (
                     <>
-                        <Education data={data} key={index} index={index} handleUpdateEducation={handleUpdateEducation}/>
-                        <button onClick={() => handleRemoveEducation(index)}>Remove</button>
+                        <Education data={data} key={index} index={index} handleUpdateEducation={handleUpdateEducation} handleRemoveEducation = {handleRemoveEducation}/>
                     </>
                 )
             })}
@@ -258,10 +263,7 @@ function EducationalExperience(props){
                     </div>
                 </div>
 
-                
-
-                
-                <button type="submit">Add To Resume</button>
+                <button className="add-to-resume bttn" type="submit">Add To Resume</button>
             </form>
         </>
     );
