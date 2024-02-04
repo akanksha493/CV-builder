@@ -12,6 +12,6 @@ It collects :
 
 [Live Preview](https://zingy-marshmallow-b54010.netlify.app/)
 
-![](./src/assets/screenshot.png)
+![](./src/assets/screenshot-v2.png)
 
 
