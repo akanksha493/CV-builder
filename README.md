@@ -1,7 +1,6 @@
 # CV Builder
 
-This project was a assignment from [The Odin Project](https://www.theodinproject.com/lessons/node-path-react-new-cv-application). The aim was to build a mutipage Restaurant websites using javascript, and webpack for bundling.
-
+This project was build as a part of [The Odin Project Curriculum](https://www.theodinproject.com/lessons/node-path-react-new-cv-application).
 
 ## What is it?
 This app builds Resume using the information you provide through forms. 
